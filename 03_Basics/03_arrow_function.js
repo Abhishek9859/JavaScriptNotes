@@ -42,7 +42,7 @@ const user = {
 //
 //console.log(addTwo(3 ,4) )
 
-//const addTwo = (num1 , num2) => (num1 + num2)   //output: 7 => when we write the code in implicitly .then we don't need to used return statement but in explicity fucntion we used to return statement which is shown in above
+//const addTwo = (num1 , num2) => (num1 + num2)   //output: 7 => when we write the code in implicitly .then we don't need to used return statement but in explicity function we need to write return statement which is shown in above
 //console.log(addTwo(3 ,4) )
 
 const addTwo = (num1 , num2) => ({username: "abhishek"})      // this is way to return an object

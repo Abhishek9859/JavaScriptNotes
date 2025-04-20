@@ -10,7 +10,7 @@ if(true){
 
 //console.log(a);         //a is not defined , a is defined inside the scope
 //console.log(b);         // same for b
-//console.log(c);           // but c var value comes out value from the scope that is why we never used var
+//console.log(c);           // but c var value comes out  from the scope that is why we never used var
 
 
 

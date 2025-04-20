@@ -19,6 +19,7 @@ const myNums =[1 ,2,3]
 //  return acc + currVal
 //} , 0)
 //console.log(myTotal)
+
 /*  output :  how it works
 acc: 0 and currVal : 1
 acc: 1 and currVal : 2
@@ -55,7 +56,7 @@ const shoppingCart  = [
   },
   {
     itemName : "Datascientist course",
-    price: 12999
+    price: 1000
   },
 ]
 

@@ -1,9 +1,9 @@
-const name = "abishek"
+const names = "abhishek"
 const repoCount = 50;
 
 //console.log(name + repoCount + " value")
 
-console.log( `Hello my name is ${name} and my repo count is ${repoCount}`);
+console.log( `Hello my name is ${names} and my repo count is ${repoCount}`);
 
 const gameName = new String('abhishek--kumar-')
 
@@ -21,7 +21,7 @@ console.log(gameName.toWellFormed());
 const newString = gameName.substring(0 , 4);
 console.log(newString)
 
-const anotherString = gameName.slice(-8, 5) // we also used negative value for slice method
+const anotherString = gameName.slice(-8, 15) // we also used negative value for slice method but we need take some good range for print     string in slice.
 console.log(anotherString);
 
 

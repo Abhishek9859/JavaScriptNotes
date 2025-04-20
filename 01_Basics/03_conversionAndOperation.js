@@ -31,7 +31,7 @@ let booleanIsLoggedIN = Boolean(isLoggedIn)
 
 // 1  => true
 // ""  => false
-// "abhishek" => true
+// "Abhishek" => true
 
 
 

@@ -1,13 +1,13 @@
 const coding = ["js" , "ruby" , "java" , "cpp" , "python"]
 
-//coding.forEach( function (item){     // we used call back function in for each loop . function is call back that why we can't write name of a function
-//  console.log(item)
-//})
+coding.forEach( function (item){     // we used call back function in for each loop . function is call back that why we can't write name of a function
+  console.log(item)
+})
 
 
-//coding.forEach((value) =>{
-//  console.log(value)
-//})
+coding.forEach((value) =>{
+  console.log(value)
+})
 
 
 

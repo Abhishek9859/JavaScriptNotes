@@ -31,7 +31,7 @@ console.log(myArr[1]);
 
 
 
-// slice , splice    => the main difference between slice and splice is whether splice mainpulate the array whereas slice doesn't mainpulate it.
+// slice , splice    => the main difference between slice and splice is that splice mainpulate the array whereas slice doesn't mainpulate it.
 
 console.log("A" , myArr);              //output : A [ 0, 1, 2, 3, 4, 5 ]
 

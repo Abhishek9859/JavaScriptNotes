@@ -24,7 +24,7 @@ const JsUser = {
 //console.log(JsUser[mySym])
 
 
-JsUser.email = "abhishek@chargpt.com"
+JsUser.email = "abhishek@chatgpt.com"
 //Object.freeze(JsUser)                         //it's propogate till abhishek@chatgpt.com , it's not go to next that  is abhishek@microsoft.com becasue of freeze method 
 JsUser.email ="abhishek@microsoft.com"
 //console.log(JsUser)

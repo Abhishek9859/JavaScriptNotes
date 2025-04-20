@@ -22,7 +22,7 @@ const dc_heros = ["superman" ,"flash" , "Batman"]
 
 
 
-//console.log(Array.isArray("Abhishek"))   // To check Abhishek array is not output : false
+//console.log(Array.isArray("Abhishek"))   // To check wheter Abhishek is array or not. output : false
 //console.log(Array.from("Abhishek"))      // To way to convert into Array Output :['A', 'b', 'h 'i', 's', 'h','e', 'k']
 
 
