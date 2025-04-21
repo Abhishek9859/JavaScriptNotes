@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM</title>
+</head>
+<body style="background-color: black; color: white;">
+  <ul class="language">
+    <li>JavaScript</li>
+  </ul>
+</body>
+<script>
+// add value
+
+// innerHTML used to add list item but it's not optimize way to add list item. Because it traverse each time when you add an item list. If item is too big then it's more time to add the list.
+//In this example, we can see that there is only list item so, we can use appnedChild but in big project, when is more than 1000 or even more, it traverse each item and take more time .
+
+  function addLanguage(langName){
+    const li = document.createElement('li');
+    li.innerHTML = `${langName}`
+    document.querySelector('.language').appendChild(li)
+  }
+  addLanguage("python")
+  addLanguage("typescript")
+
+  // optimize way to add list item. in this method, direct add elment and not traverse it.
+
+  function addOptiLanugage(langName){
+    const li = document.createElement('li');
+    li.appendChild(document.createTextNode(langName))
+    document.querySelector('.language').appendChild(li)  //.language and li is from body
+    
+  }
+  addOptiLanugage('golang')
+
+
+  //Edit
+  const secondLang = document.querySelector("li:nth-child(3)")
+  //secondLang.innerHTML ="mojo"   ://=> it's not optimzed way to edit but we use it. As we know, innerHTML always traverse element.
+  const newLi = document.createElement('li')   // createElement for creating element.
+  newLi.textContent = "mojo"                  // textContent for create text for reaplacement
+  secondLang.replaceWith(newLi)
+
+  // edit
+  const firstLang = document.querySelector("li:first-child");
+  //firstLang.innerHTML = "Java"
+  firstLang.outerHTML ='<li>TypeScript</li>'
+
+
+  // remove
+  const lastLang = document.querySelector('li:last-child')
+  lastLang.remove()
+
+    </script>
+</html>
