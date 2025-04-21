@@ -82,3 +82,16 @@ form.addEventListener('submit', function (e) {
 
 ```
 
+
+## Project 3
+
+``` javaScript
+const clock = document.querySelector('#clock')
+
+// it is used to update time every second or millisecond according to your requirements
+setInterval(function(){
+  let newDate = new Date()
+  clock.innerHTML = newDate.toLocaleTimeString();
+} , 1000)
+
+```
