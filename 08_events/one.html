@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>htnml Events </title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>  
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+        
+   </div>
+</body>
+
+
+<script>
+ // In javaScript, events runs sequentially. javaScript is a sequentially run language. But some exceptional events is invoked by some active like mouse movement, keyboard press , drag and drop etc.
+
+// onclick="alert('owl')" =>(When the evet used in after alt="" in html)  we can also use onclick event but it's not good approach beacuse it is not feasible apporach when the project is scalable. But in react, we used the event because it doesn't create any problem when the project is scalable.
+
+
+
+
+    // document.getElementById('owl').onclick = function(){
+    //     alert("owl clicked")                             //this approach is so so because it provide less feature .
+    // }
+
+     // attachEvent()
+    // jQuery - on
+     
+    //for reading is also interview perspective
+    // type, timestamp, defaultPrevented
+    // target, toElement, srcElement, currentTarget,
+    // clientX, clientY, screenX, screenY
+    // altkey, ctrlkey, shiftkey, keyCode
+
+    // document.getElementById('images').addEventListener('click', function(e){  
+    //     console.log("clicked inside the ul");                            
+    // }, false)         // false is default , it tells about event propagation. there are two types of event propagation 1. event bubbling 2. event capturing. We use false that is default this is event bubbling but in some sanerio we can need to use event capturing that is true
+
+    // document.getElementById('owl').addEventListener('click', function(e){  // it is best way to use event listener.
+    //     console.log("owl clicked");
+    //     e.stopPropagation()
+    // }, false)
+    
+    // document.getElementById('google').addEventListener('click',function(e){
+    //     e.preventDefault();
+    //     e.stopPropagation()
+    //     console.log("google clicked");
+    // }, false)
+   
+    
+    document.querySelector('#images').addEventListener('click', function(e){
+        console.log(e.target.tagName);
+        if (e.target.tagName === 'IMG') {
+            console.log(e.target.id);
+            let removeIt = e.target.parentNode
+            removeIt.remove()
+        }
+    
+        
+    })
+    
+    //removeIt.parentNode.removeChild(removeIt)  // it also used to remove the child
+</script>
+</html>

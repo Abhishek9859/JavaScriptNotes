@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Chai aur javaScript</h1>
+  <button id="start">Start</button>
+  <button id="stop">Stop</button>
+</body>
+<script>
+  //const sayDate = function(str){
+  //  console.log(str, Date.now());
+  //  
+  //}
+  // const stopInterval =setInterval(sayDate , 1000 , "hi")  // if you want to run this program in console first to comment "clearInterval" then it run and for stop remove the comment and run.
+  // clearInterval(stopInterval)
+   const sayDate = function(str){
+    console.log(str, Date.now())
+   }
+   document.querySelector('#start').addEventListener('click' , function(){
+    const stopp = setInterval(sayDate , 1000 , "hi" )
+    console.log("start")
+    document.querySelector('#stop').addEventListener('click' , function(){
+    clearInterval(stopp)
+    console.log("stopped")
+   })
+   })
+   
+
+   
+</script>
+</html>
