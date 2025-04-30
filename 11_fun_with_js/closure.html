@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clouser</title>
+</head>
+<body style="background-Color :#212121;;">
+  <button id="orange">Orange</button>
+  <button id="green">Green</button>
+</body>
+<script>
+
+//lexical scope => inner function has access of outer function but outer function doesn't have access of inner funtion
+ // function outer(){
+ //   let username = "Abhishek"
+ //   function inner(){
+ //     console.log("inner",username)
+ //   }
+ //   inner()
+ // }
+ // outer()
+ // console.log("TOO OUTER", username);
+
+  // closure 
+
+  function makeFunc(){
+    const name = "Mozilla"
+    function displayName(){
+      console.log(name)
+    }
+    return displayName;         // when return function then not only return function but also return whole lexical scope that means in outer function, we decalre anything in outer function all value return through "displayname" through lexical scope. its share a memory between outer and inner function
+
+  }
+
+  const myfunc = makeFunc();
+  myfunc();
+  
+</script>
+<script>
+  // real world example of closuer
+  // if you have 500 color given then need to copy 500 times that is messy so we need to use closure and lexical properties
+  //document.getElementById("orange").onclick = function(){
+  //  document.body.style.backgroundColor = `orange`
+  //}
+  //document.getElementById("green").onclick = function(){
+  //  document.body.style.backgroundColor = `green`
+  //}
+
+
+  function clickHandler(color){
+    return function(){
+      document.body.style.backgroundColor = `${color}`    // access hota outer function isliye ye run karega pura lexical jata h outper function ko 
+    }
+  }
+
+  document.getElementById('orange').onclick = clickHandler("orange")
+  document.getElementById('green').onclick = clickHandler("green")
+</script>
+</html>
